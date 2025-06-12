@@ -499,28 +499,28 @@
                             <input type="hidden" name="_captcha" value="false">
 
                             <!-- MENSAJE DE ÉXITO REDIRECCIONADO -->
-                            <input type="hidden" name="_next" value="https://yumastw.github.io/boda/index.html">
+                            <input type="hidden" name="_next" value="https://yumastw.github.io/boda/gracias.html">
 
                             <!-- LOS CAMPOS VISIBLES -->
                             <input type="text" name="name" placeholder="Nombre*" required>
                             <input type="email" name="email" placeholder="Correo*" required>
 
-                            <select name="guest" required>
-                                <option value="" disabled selected>Número de invitados*</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </select>
+                                <select class="form-control" name="guest">
+                                    <option disabled selected>Número de invitados*</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
 
-                            <select name="events" required>
-                                <option value="" disabled selected>Asistiré a*</option>
-                                <option>Todo el evento</option>
-                                <option>Ceremonia de casamiento</option>
-                                <option>Fiesta de recepción</option>
-                            </select>
+                                <select class="form-control" name="events">
+                                    <option disabled selected>Asistiré a*</option>
+                                    <option>Todo el evento</option>
+                                    <option>Ceremonia de casamiento</option>
+                                    <option>Fiesta de recepción</option>
+                                </select>
 
-                            <textarea name="notes" placeholder="Mensaje (opcional)"></textarea>
+                            <textarea class="contact-textarea" placeholder="Mensaje" name="notes"></textarea>
 
                             <button type="submit">Enviar</button>
                             </form>
