@@ -481,56 +481,68 @@
         </div>
     </div>
     <!-- gallery area end -->
-    <!-- guest-area strat -->
-    <div id="Contact" class="guest-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="guest-wrap">
-                        <div class="col-12">
-                            <div class="section-title section-title4 text-center">
-                                <h2>Se nuestro invitado</h2>
-                                <p>Por favor, reserva antes hasta el 1 de Julio del 2025</p>
-                            </div>
-                        </div>
-                        <div class="contact-form form-style">
-                            <form action="https://formsubmit.co/yumastw@gmail.com" method="POST">
-                            <!-- OCULTAR CAPTCHA -->
-                            <input type="hidden" name="_captcha" value="false">
-
-                            <!-- MENSAJE DE ÉXITO REDIRECCIONADO -->
-                            <input type="hidden" name="_next" value="https://github.com/Yumastw/boda/blob/main/gracias.html">
-
-                            <!-- LOS CAMPOS VISIBLES -->
-                            <input type="text" name="name" placeholder="Nombre*" required>
-                            <input type="email" name="email" placeholder="Correo*" required>
-
-                            <select name="guest" required>
-                                <option value="" disabled selected>Número de invitados*</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </select>
-
-                            <select name="events" required>
-                                <option value="" disabled selected>Asistiré a*</option>
-                                <option>Todo el evento</option>
-                                <option>Ceremonia de casamiento</option>
-                                <option>Fiesta de recepción</option>
-                            </select>
-
-                            <textarea name="notes" placeholder="Mensaje (opcional)"></textarea>
-
-                            <button type="submit">Enviar</button>
-                            </form>
+<!-- guest-area start -->
+<div id="Contact" class="guest-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="guest-wrap">
+                    <div class="col-12">
+                        <div class="section-title section-title4 text-center">
+                            <h2>Sé nuestro invitado</h2>
+                            <p>Por favor, reserva antes del 1 de Julio del 2025</p>
                         </div>
                     </div>
-                </div>
+                    <div class="contact-form form-style">
+                        <form id="rsvp-form" action="https://formsubmit.co/yumastw@gmail.com" method="POST" class="validate-rsvp-form">
+                            <!-- FormSubmit hidden fields -->
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="index.html">
+
+                            <div class="row">
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" placeholder="Nombre*" id="fname" name="name" required>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="email" placeholder="Correo*" id="email" name="email" required>
+                                </div>
+                                <div class="col col-sm-6">
+                                    <select class="form-control" name="guest" required>
+                                        <option disabled selected>Número de invitados*</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                    </select>
+                                </div>
+                                <div class="col col-sm-6">
+                                    <select class="form-control" name="events" required>
+                                        <option disabled selected>Asistiré a*</option>
+                                        <option>Todo el evento</option>
+                                        <option>Ceremonia de casamiento</option>
+                                        <option>Fiesta de recepción</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="contact-textarea" placeholder="Mensaje" name="notes"></textarea>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" id="submit" class="submit">Enviar invitación</button>
+                                    <span id="loader"><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i></span>
+                                </div>
+                                <div class="col col-md-12 success-error-message">
+                                    <div id="success">Gracias</div>
+                                    <div id="error">Un error ocurrió mientras se enviaba el correo, por favor intenta de nuevo más tarde.</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div> <!-- contact-form -->
+                </div> <!-- guest-wrap -->
             </div>
         </div>
     </div>
-    <!-- guest-area end -->
+</div>
+<!-- guest-area end -->
     <!-- Gift Registration start -->
     <div class="Gift-area pt--100 pb--30">
         <div class="container">
